@@ -10,7 +10,7 @@ class KarirData
 
     public ?int $tahunSelesai;
 
-    public function __construct($jabatan, $tahunMulai, $tahunSelesai)
+    public function __construct(string $jabatan, int $tahunMulai, int $tahunSelesai)
     {
         $this->jabatan = $jabatan;
         $this->tahunMulai = $tahunMulai;

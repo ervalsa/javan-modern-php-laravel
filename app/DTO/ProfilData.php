@@ -16,7 +16,7 @@ class ProfilData
 
     public array $karir;
 
-    public function __construct($nomorUrut, $nama, $posisi, $tempatTanggalLahir, $usia, $karir)
+    public function __construct(int $nomorUrut, string $nama, string $posisi, string $tempatTanggalLahir, int $usia, array $karir)
     {
         $this->nomorUrut = $nomorUrut;
         $this->nama = $nama;
