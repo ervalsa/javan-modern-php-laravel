@@ -18,7 +18,7 @@ it('returns an array of parsed Capres data', function () {
                 'tempat_tanggal_lahir' => 'Surakarta, 21 Juni 1961',
                 'karir' => [
                     'Politikus',
-                    'Pebisnis'
+                    'Pebisnis',
                 ],
             ],
         ],
@@ -29,8 +29,8 @@ it('returns an array of parsed Capres data', function () {
                 'tempat_tanggal_lahir' => 'Tangerang, 11 Maret 1943',
                 'karir' => [
                     'Agamawan',
-                    'Ulama'
-                ]
+                    'Ulama',
+                ],
             ],
         ],
     ];

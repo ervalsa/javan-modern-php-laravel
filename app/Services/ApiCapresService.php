@@ -6,6 +6,8 @@ use App\DTO\KarirData;
 use App\DTO\ProfilData;
 use App\Enum\PosisiEnum;
 use Exception;
+use Illuminate\Database\LostConnectionException;
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
 
 class ApiCapresService
@@ -15,9 +17,13 @@ class ApiCapresService
         try {
             $api = Http::get('https://mocki.io/v1/92a1f2ef-bef2-4f84-8f06-1965f0fca1a7');
 
-            if (! $api->successful()) {
+            if (!$api->successful()) {
                 return [];
             }
+        } catch (ConnectionException $e) {
+            report($e);
+
+            return [];
         } catch (Exception $e) {
             report($e);
 
